@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTHS Mamfe</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #004080;
+      color: #fff;
+      padding: 20px 40px;
+      text-align: center;
+      animation: fadeDown 1.5s ease-out;
+    }
+    nav {
+      background: #002855;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffc107;
+    }
+    .hero {
+      background: linear-gradient(to right, #004080, #0059b3);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeUp 2s ease-out;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #004080;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    footer {
+      background: #002855;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+    .news-ticker {
+      background: #ffc107;
+      color: #002855;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 1rem;
+      animation: fadeUp 1.5s ease-out;
+      border-top: 2px solid #002855;
+      border-bottom: 2px solid #002855;
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GTHS Mamfe</h1>
+    <p>Government Technical High School Mamfe — Shaping Technical Leaders</p>
+  </header>
+
+  <nav>
+    <a href="#industrial">Industrial</a>
+    <a href="#commercial">Commercial</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Welcome to GTHS Mamfe</h1>
+    <p>Explore our technical programs and vibrant student life.</p>
+  </div>
+
+  <section class="section" id="industrial">
+    <h2>Industrial Department</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Power System Engineering</h3>
+        <p>Hands-on training in electrical power systems, generation, transmission, and industrial installations. Students gain practical skills in high-voltage operations, circuit analysis, and safety standards for working in electrical environments.</p>
+      </div>
+      <div class="card">
+        <h3>Building Construction</h3>
+        <p>Develop practical skills in architectural drawing, structural design, masonry, and construction planning. Emphasis is placed on modern building techniques, materials, and sustainability.</p>
+      </div>
+      <div class="card">
+        <h3>Carpentry & Joinery</h3>
+        <p>Master the craft of woodworking, furniture design, and structural joinery. Students are trained in using traditional and modern tools to construct quality wood-based products for industrial and domestic use.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="commercial">
+    <h2>Commercial Department</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Office Automation</h3>
+        <p>Learn to use digital office tools, manage data, and enhance productivity through automation. This course prepares students for the modern workplace with skills in spreadsheets, word processing, and administrative software.</p>
+      </div>
+      <div class="card">
+        <h3>Secretarial Studies</h3>
+        <p>Train in document processing, office management, shorthand, and effective communication. Students become proficient in organizing meetings, managing schedules, and performing secretarial duties with professionalism.</p>
+      </div>
+      <div class="card">
+        <h3>Accounting</h3>
+        <p>Gain solid foundations in bookkeeping, financial reporting, taxation, and business mathematics. This program equips students with the skills to manage business finances and prepare for careers in finance or entrepreneurship.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About GTHS Mamfe</h2>
+    <p style="text-align: center; max-width: 800px; margin: auto;">
+      GTHS Mamfe was created in 1980 by a presidential decree. Since its establishment, the school has nurtured thousands of students through dedicated administrators and qualified staff. With departments in both industrial and commercial education, GTHS Mamfe continues to lead as the top technical high school in the division, producing competent graduates for both national and international opportunities.
+    </p>
+  </section>
+
+  <div class="news-ticker">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+      📢 GTHS Mamfe Admissions Ongoing | New Labs for Power Engineering | 2025 Academic Year Starts Soon!
+    </marquee>
+  </div>
+
+  <footer id="contact">
+    <p>&copy; 2025 GTHS Mamfe. All rights reserved. | Mamfe, Cameroon</p>
+    <p>Contact: info@gthsmamfe.edu | +237 6XX XXX XXX</p>
+  </footer>
+</body>
+</html>
