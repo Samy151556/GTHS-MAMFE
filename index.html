@@ -88,16 +88,33 @@
       padding: 30px 10px;
       margin-top: 40px;
     }
-    .news-ticker {
-      background: #ffc107;
-      color: #002855;
-      font-weight: bold;
-      padding: 10px;
-      font-size: 1rem;
-      animation: fadeUp 1.5s ease-out;
-      border-top: 2px solid #002855;
-      border-bottom: 2px solid #002855;
+    form {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background-color: #004080;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #003366;
+    }
+
     @keyframes fadeDown {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -117,7 +134,6 @@
   <nav>
     <a href="#industrial">Industrial</a>
     <a href="#commercial">Commercial</a>
-    <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -131,15 +147,15 @@
     <div class="cards">
       <div class="card">
         <h3>Power System Engineering</h3>
-        <p>Hands-on training in electrical power systems, generation, transmission, and industrial installations. Students gain practical skills in high-voltage operations, circuit analysis, and safety standards for working in electrical environments.</p>
+        <p>Hands-on training in electrical power systems and industrial installations.</p>
       </div>
       <div class="card">
         <h3>Building Construction</h3>
-        <p>Develop practical skills in architectural drawing, structural design, masonry, and construction planning. Emphasis is placed on modern building techniques, materials, and sustainability.</p>
+        <p>Develop practical skills in architectural drawing, masonry, and construction planning.</p>
       </div>
       <div class="card">
         <h3>Carpentry & Joinery</h3>
-        <p>Master the craft of woodworking, furniture design, and structural joinery. Students are trained in using traditional and modern tools to construct quality wood-based products for industrial and domestic use.</p>
+        <p>Master the craft of woodworking, design, and furniture construction.</p>
       </div>
     </div>
   </section>
@@ -149,35 +165,54 @@
     <div class="cards">
       <div class="card">
         <h3>Office Automation</h3>
-        <p>Learn to use digital office tools, manage data, and enhance productivity through automation. This course prepares students for the modern workplace with skills in spreadsheets, word processing, and administrative software.</p>
+        <p>Learn digital office tools, data management, and computer literacy.</p>
       </div>
       <div class="card">
         <h3>Secretarial Studies</h3>
-        <p>Train in document processing, office management, shorthand, and effective communication. Students become proficient in organizing meetings, managing schedules, and performing secretarial duties with professionalism.</p>
+        <p>Train in document processing, office management, and communication skills.</p>
       </div>
       <div class="card">
         <h3>Accounting</h3>
-        <p>Gain solid foundations in bookkeeping, financial reporting, taxation, and business mathematics. This program equips students with the skills to manage business finances and prepare for careers in finance or entrepreneurship.</p>
+        <p>Gain strong foundations in financial reporting, bookkeeping, and business math.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" id="about">
-    <h2>About GTHS Mamfe</h2>
-    <p style="text-align: center; max-width: 800px; margin: auto;">
-      GTHS Mamfe was created in 1980 by a presidential decree. Since its establishment, the school has nurtured thousands of students through dedicated administrators and qualified staff. With departments in both industrial and commercial education, GTHS Mamfe continues to lead as the top technical high school in the division, producing competent graduates for both national and international opportunities.
-    </p>
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mbloowvb" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
-  <div class="news-ticker">
-    <marquee behavior="scroll" direction="left" scrollamount="5">
-      📢 GTHS Mamfe | New Labs for Power Engineering and other departments | 2026 Academic Year Starts Soon!
-    </marquee>
-  </div>
-
-  <footer id="contact">
-    <p>&copy; 2025 GTHS Mamfe. All rights reserved. | Mamfe South West Region, Cameroon</p>
+  <footer>
+    <p>&copy; 2025 GTHS Mamfe. All rights reserved. | Mamfe, Cameroon</p>
     <p>Contact: info@gthsmamfe.edu | +237 6XX XXX XXX</p>
   </footer>
+
+  <script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        alert("Thank you! Your message has been sent.");
+        form.reset();
+      } else {
+        alert("Oops! There was a problem submitting your form.");
+      }
+    });
+  </script>
 </body>
 </html>
