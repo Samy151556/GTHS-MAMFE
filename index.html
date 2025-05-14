@@ -1,230 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GTHS MAMFE</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      scroll-behavior: smooth;
-    }
-    header {
-      background: #004080;
-      color: #fff;
-      padding: 20px 40px;
-      text-align: center;
-      animation: fadeDown 1.5s ease-out;
-    }
-    nav {
-      background: #002855;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffc107;
-    }
-    .hero {
-      background: linear-gradient(to right, #004080, #0059b3);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-      animation: fadeUp 2s ease-out;
-    }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-    .hero p {
-      font-size: 1.2rem;
-    }
-    .section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2rem;
-      color: #004080;
-    }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 20px;
-    }
-    .card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 300px;
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-10px);
-    }
-    footer {
-      background: #002855;
-      color: white;
-      text-align: center;
-      padding: 30px 10px;
-      margin-top: 40px;
-    }
-    form {
-      max-width: 600px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    form button {
-      background-color: #004080;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    form button:hover {
-      background-color: #003366;
-    }
-    @keyframes fadeDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTHS Mamfe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #004080;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            animation: fadeDown 1.5s ease-out;
+        }
+
+        nav {
+            background: #002855;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffc107;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #004080, #0059b3);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            animation: fadeUp 2s ease-out;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background-color: wheat;
+        }
+
+        .section {
+            padding: 40px 20px;
+            margin: auto;
+            background-color: aqua;
+            border-radius: 10px;
+            animation: fadeUp 3s ease-out;
+            max-width: 1000px;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #004080;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #003366;
+        }
+
+        footer {
+            background: #002855;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card, .section {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            .hero {
+                padding: 40px 10px;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>WELCOME TO G.T.H.S MAMFE</h1>
+        <p>SHAPING VOCATIONAL EDUCATION AND ENTREPRENEURS</p>
+    </header>
 
-  <header>
-    <h1>GTHS Mamfe</h1>
-    <p>Government Technical High School Mamfe — Shaping Technical Leaders</p>
-  </header>
+    <nav>
+        <a href="About.html">About</a>
+        <a href="commercial_First_Cycle.html">First Cycle Commercial</a>
+        <a href="Industrial_First_Cycle.html">First Cycle Industrial</a>
+        <a href="Industrial_Second_Cycle.html">Second Cycle Industrial</a>
+        <a href="commercial_Second_Cycle.html">Second Cycle Commercial</a>
+        <a href="Open Doorday.html">Open Doorday</a>
+        <a href="EX-Students.html">Ex Students</a>
+       
 
-  
+    </nav>
 
-  <nav>
-    <a href="#industrial">Industrial</a>
-    <a href="#commercial">Commercial</a>
-    <a href="#contact">Contact</a>
-    <a href="EX-Students.html">Ex Students</a>
-  </nav>
-
-  <div class="hero">
-    <h1>Welcome to GTHS Mamfe</h1>
-    <p>Explore our technical programs and vibrant student life.</p>
-  </div>
-
-  <section class="section" id="industrial">
-    <h2>Industrial Department</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Power System Engineering</h3>
-        <p>Hands-on training in electrical power systems and industrial installations.</p>
-      </div>
-      <div class="card">
-        <h3>Building Construction</h3>
-        <p>Develop practical skills in architectural drawing, masonry, and construction planning.</p>
-      </div>
-      <div class="card">
-        <h3>Carpentry & Joinery</h3>
-        <p>Master the craft of woodworking, design, and furniture construction.</p>
-      </div>
+    <div class="hero">
+        <h1>MOTTO: HARD WORK DISCIPLINE AND SUCCESS</h1>
+        <p>Explore our technical programs and vibrant environment.</p>
     </div>
-  </section>
 
-  <section class="section" id="commercial">
-    <h2>Commercial Department</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Office Automation</h3>
-        <p>Learn digital office tools, data management, and computer literacy.</p>
-      </div>
-      <div class="card">
-        <h3>Secretarial Studies</h3>
-        <p>Train in document processing, office management, and communication skills.</p>
-      </div>
-      <div class="card">
-        <h3>Accounting</h3>
-        <p>Gain strong foundations in financial reporting, bookkeeping, and business math.</p>
-      </div>
+    <div class="card">
+        <p>Government Technical High School (GTHS) Mamfe is a renowned technical institution located in the South West Region of Cameroon. It plays a vital role in equipping students with both academic knowledge and hands-on skills necessary for the job market and further studies. The school is structured into two main sections: the Industrial Department and the Commercial Department, each comprising a First Cycle and a Second Cycle.</p>
+        <p>The Industrial Department offers specialized training in various fields, including Electrical Power Engineering, Building and Construction, Wood Works, Home Economics, and Fashion Designing. These programs are designed to provide students with practical and technical expertise for careers in industry and craftsmanship.</p>
+        <p>The Commercial Department focuses on business and administrative skills, with programs in Accounting, Office Automation, and Secretarial Studies. This section prepares students for roles in the business sector, emphasizing both theoretical and practical business knowledge.</p>
+        <p>GTHS Mamfe remains committed to academic excellence and vocational training, fostering a new generation of skilled professionals in Cameroon.</p>
     </div>
-  </section>
 
-  <section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/mbloowvb" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/mbloowvb" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
- 
-  <script>
-    const form = document.querySelector("form");
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
+    <script>
+        const form = document.querySelector("form");
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const data = new FormData(form);
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-      if (response.ok) {
-        alert("Thank you! Your message has been sent.");
-        form.reset();
-      } else {
-        alert("Oops! There was a problem submitting your form.");
-      }
-    });
-  </script>
+            if (response.ok) {
+                alert("Thank you! Your message has been sent.");
+                form.reset();
+            } else {
+                alert("Oops! There was a problem submitting your form.");
+            }
+        });
+    </script>
 
-  <!-- Scrolling Text Section with Yellow Color -->
-  <div style="background: blue; padding: 10px 0;">
-    <marquee behavior="scroll" direction="left" scrollamount="5" style="color: white; font-weight: bold;">
-      🎓 Welcome to GTHS Mamfe — Shaping Technical Leaders. Enroll now for the 2026 Academic Year!
-    </marquee>
-  </div>
+    <div style="background: blue; padding: 10px 0;">
+        <marquee behavior="scroll" direction="left" scrollamount="5" style="color: white; font-weight: bold;">
+            🎓 Welcome to GTHS Mamfe — Shaping Technical Vocational Leaders. Enroll now for the 2025/2026 Academic Year Now!
+        </marquee>
+    </div>
 
-   <footer>
-    <p>&copy; 2025 GTHS Mamfe. All rights reserved. | GTHS Mamfe SOUTH WEST REGION, Cameroon</p>
-    <p>Contact: info@gthsmamfe.edu | +237 6XX XXX XXX</p>
-  </footer>
-
+    <footer>
+        <p>&copy; 2025 GTHS MAMFE| ALL RIGHTS RESERVED. | GTHS MAMFE | MANYU DIVISION SOUTH WEST REGION | CAMEROON</p>
+        <p>Contact: info@gthsmamfe.edu | +237 6XX XXX XXX | +237 34 XX XX</p>
+    </footer>
 </body>
 </html>
